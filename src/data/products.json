@@ -2,50 +2,50 @@
   "products": [
     {
       "id": 1,
-      "name": "Phone a",
+      "name": "phone-a",
       "description": "abcvsdevawehv 3uirhoiqu 3 ii 3qio3go iio efqoygoy eogfqo  weggq wogroqdef",
       "keywords": ["stuffed", "plush", "groot", "guardian of teh galaxy"],
-      "image": "1-groot.jpg",
+      "image": "phone-a.jpg",
       "age": ["0", "+"],
 
       "price": 5.0
     },
     {
       "id": 2,
-      "name": "Phone b",
+      "name": "phone-b",
       "description": "abcvsdevawehv 3uirhoiqu 3 ii 3qio3go iio efqoygoy eogfqo  weggq wogroqdef",
       "keywords": ["stuffed", "plush", "groot", "guardian of teh galaxy"],
-      "image": "1-groot.jpg",
+      "image": "phone-a.jpg",
       "age": ["0", "+"],
 
       "price": 18.58
     },
     {
       "id": 3,
-      "name": "Phone c",
+      "name": "phone-c",
       "description": "abcvsdevawehv 3uirhoiqu 3 ii 3qio3go iio efqoygoy eogfqo  weggq wogroqdef",
       "keywords": ["stuffed", "plush", "groot", "guardian of teh galaxy"],
-      "image": "1-groot.jpg",
+      "image": "phone-a.jpg",
       "age": ["0", "+"],
 
       "price": 10.58
     },
     {
       "id": 4,
-      "name": "Phone d",
+      "name": "phone-d",
       "description": "abcvsdevawehv 3uirhoiqu 3 ii 3qio3go iio efqoygoy eogfqo  weggq wogroqdef",
       "keywords": ["stuffed", "plush", "groot", "guardian of teh galaxy"],
-      "image": "1-groot.jpg",
+      "image": "phone-a.jpg",
       "age": ["0", "+"],
 
       "price": 32.58
     },
     {
       "id": 5,
-      "name": "Phone e",
+      "name": "phone-e",
       "description": "abcvsdevawehv 3uirhoiqu 3 ii 3qio3go iio efqoygoy eogfqo  weggq wogroqdef",
       "keywords": ["stuffed", "plush", "groot", "guardian of teh galaxy"],
-      "image": "1-groot.jpg",
+      "image": "phone-a.jpg",
       "age": ["0", "+"],
 
       "price": 45.58

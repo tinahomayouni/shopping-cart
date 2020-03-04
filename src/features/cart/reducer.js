@@ -8,3 +8,6 @@ const cartReducer = (state[], action) =>{
             return state.filter((item, index) => index !== firstMatchIndex)
     }
 }
+
+
+export default cartReducer

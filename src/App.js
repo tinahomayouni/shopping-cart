@@ -1,7 +1,8 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-
-import Router from "./Router";
+import MyRoutes from "./Router";
+import { BrowserRouter as Router, NavLink } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./config/store";
 
 const Navigation = props => (
   <nav>
@@ -18,8 +19,12 @@ const Navigation = props => (
 function App() {
   return (
     <div className="page-container">
-      <Navigation />
-      <Router />
+      <Provider store={store}>
+        <Router>
+          <Navigation />
+          <MyRoutes />
+        </Router>
+      </Provider>
     </div>
   );
 }

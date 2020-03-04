@@ -1,6 +1,7 @@
 import React from "react";
 import ProductListItem from "./product-list-item";
 import { connect } from "react-redux";
+
 function ProductListing(props) {
   return (
     <div className="product-list">
@@ -10,12 +11,13 @@ function ProductListing(props) {
     </div>
   );
 }
-function mapStateToProps(state) {
+
+const mapStateToProps = state => {
   return {
     cart: state.cart
   };
-}
-function mapDispatchToProps(dispatch) {
+};
+const mapDispatchToProps = dispatch => {
   return {
     addToCart: item => {
       dispatch({ type: "ADD", payload: item });
@@ -24,6 +26,6 @@ function mapDispatchToProps(dispatch) {
       dispatch({ type: "REMOVE", payload: item });
     }
   };
-}
+};
 
-export default connect(ProductListing);
+export default connect(mapStateToProps, mapDispatchToProps)(ProductListing);

@@ -8,7 +8,7 @@ function ProductListing(props) {
   return (
     <div className="product-list">
       {props.products.map(product => (
-        <ProductListItem product={product} />
+        <ProductListItem product={product} addToCart={props.addToCart} />
       ))}
     </div>
   );

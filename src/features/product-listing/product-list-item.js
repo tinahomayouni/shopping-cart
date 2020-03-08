@@ -10,7 +10,7 @@ export default function ProductListItem(props) {
       <div>$ {props.product.price}</div>
       <div>
         <button onClick={() => props.addToCart(props.product)}>
-          add to card
+          add to card ({props.quantity ? props.quantity : 0})
         </button>
       </div>
     </div>

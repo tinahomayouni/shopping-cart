@@ -1,7 +1,8 @@
 import { ADD, REMOVE } from "./actions";
 
 const initialState = {
-  shoppingList: []
+  shoppingList: [],
+  quantities: {}
 };
 
 const cartReducer = (state = initialState, action) => {
@@ -9,10 +10,15 @@ const cartReducer = (state = initialState, action) => {
     case ADD: {
       return {
         ...state,
-        shoppingList: [
-          ...state.shoppingList,
-          { ...action.payload, quantity: 1 }
-        ]
+        shoppingList: [...state.shoppingList, action.payload],
+        quantities: [...state.shoppingList, action.payload].reduce(
+          (acc, item) => {
+            const quantity = acc[item.id];
+            quantity ? acc[item.id]++ : (acc[item.id] = 1);
+            return acc;
+          },
+          {}
+        )
       };
     }
 

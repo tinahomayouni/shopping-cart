@@ -7,23 +7,25 @@ import { useSelector, useDispatch } from "react-redux";
 function ProductListing(props) {
   console.log(props);
   const cart = useSelector(state => state.cart); // same as mapStateToProps
+  const quantities = useSelector(state => state.cart.quantities); // same as mapStateToProps
+
   const dispatch = useDispatch(); // same as mapDispatchToProps
 
-  console.log(cart, "cart");
+  console.log(quantities[3], "quantities");
 
   return (
     <div className="product-list">
-      {props.products.map(product => (
-        <ProductListItem
-          product={product}
-          quantity={cart.shoppingList.find(cartProduct => {
-            if (product.id === cartProduct.id) {
-              return cartProduct.quantity;
-            }
-          })}
-          addToCart={product => dispatch(addToCart(product))}
-        />
-      ))}
+      {props.products.map(product => {
+        console.log(product);
+        console.log(quantities[product.id], "quantities[product.id]");
+        return (
+          <ProductListItem
+            product={product}
+            quantity={quantities[product.id]}
+            addToCart={product => dispatch(addToCart(product))}
+          />
+        );
+      })}
     </div>
   );
 }

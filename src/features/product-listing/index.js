@@ -6,8 +6,8 @@ import { useSelector, useDispatch } from "react-redux";
 
 function ProductListing(props) {
   console.log(props);
-  const cart = useSelector(state => state.cart);
-  const dispatch = useDispatch();
+  const cart = useSelector(state => state.cart); // same as mapStateToProps
+  const dispatch = useDispatch(); // same as mapDispatchToProps
 
   console.log(cart, "cart");
 

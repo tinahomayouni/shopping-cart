@@ -16,6 +16,11 @@ function ProductListing(props) {
       {props.products.map(product => (
         <ProductListItem
           product={product}
+          quantity={cart.shoppingList.find(cartProduct => {
+            if (product.id === cartProduct.id) {
+              return cartProduct.quantity;
+            }
+          })}
           addToCart={product => dispatch(addToCart(product))}
         />
       ))}

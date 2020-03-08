@@ -9,7 +9,10 @@ const cartReducer = (state = initialState, action) => {
     case ADD: {
       return {
         ...state,
-        shoppingList: [...state.shoppingList, action.payload]
+        shoppingList: [
+          ...state.shoppingList,
+          { ...action.payload, quantity: 1 }
+        ]
       };
     }
 
